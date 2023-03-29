@@ -12,7 +12,7 @@ sudo apt install ffmpeg hsetroot
 ```
 The supported video formats depends on the version of `ffmpeg` that you have.
 
-Things can break depending on the version of the (core) programs used in the `bash` code of the program.
+Things can break depending on the version of `bash` and related programs used.
 
 ## Install
 ```
