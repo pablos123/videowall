@@ -1,8 +1,6 @@
-Minimalistic program to set a video as wallpaper.
+Minimalistic program to set a video as wallpaper. 📽️
 
 This program supports one video wallpaper at a time.
-
-The supported videos depends on the version of ffmpeg that you have.
 
 ## Dependencies
 - [hsetroot >= 1.02](https://github.com/himdel/hsetroot)
@@ -13,7 +11,10 @@ Ubuntu/Debian based:
 sudo apt install ffmpeg hsetroot
 ```
 
-Tested on linux Mint 21
+Tested on Linux Mint 21
+
+The supported video formats depends on the version of `ffmpeg` that you have.
+Things can break depending on the version of the (core) programs used in the `bash` code of the program.
 
 ## Install
 ```
@@ -41,3 +42,6 @@ Set the prepared video, you don't need to prepare the video again!
 ```
 videowall
 ```
+
+## More info
+The idea comes from https://github.com/terroo/wallset but I wanted a less bloated program that I know what is doing.
