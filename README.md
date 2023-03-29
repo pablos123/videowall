@@ -53,3 +53,5 @@ The idea comes from https://github.com/terroo/wallset but:
 Thank you for the inspiration!
 
 Tested on Linux Mint 21.
+
+I don't have the time to test it in Arch boxes or similar, if you want you can try to run it in other (Linux) more minimalistic OS.
