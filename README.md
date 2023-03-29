@@ -43,7 +43,13 @@ The supported video formats depends on the version of `ffmpeg` that you have.
 
 Things can break depending on the version of `bash` and related programs used.
 
+Longer the video longer will take the program to prepare it.
+
 ## More info
-The idea comes from https://github.com/terroo/wallset but I wanted a less bloated program that I know what is doing.
+The idea comes from https://github.com/terroo/wallset but:
+- I wanted a less bloated program without the extra functionalities.
+- I didn't like the 10 second limit.
+
+Thank you for the inspiration!
 
 Tested on Linux Mint 21.
