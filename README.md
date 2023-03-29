@@ -5,14 +5,18 @@ This program supports one video wallpaper at a time.
 The supported videos depends on the version of ffmpeg that you have.
 
 ## Dependencies
-```terminal
+- [hsetroot >= 1.02](https://github.com/himdel/hsetroot)
+- [ffmpeg >= 4.2.3](https://ffmpeg.org/)
+
+Ubuntu/Debian based:
+```
 sudo apt install ffmpeg hsetroot
 ```
 
 Tested on linux Mint 21
 
 ## Install
-```terminal
+```
 mkdir -p "$HOME/.local/bin/" && rm -f "$HOME/.local/bin/videowall" && wget 'https://raw.githubusercontent.com/pablos123/videowall/main/videowall' -P "$HOME/.local/bin/" && chmod +x "$HOME/.local/bin/videowall"
 ```
 This will create a file in `$HOME/.local/bin/` named `videowall`
