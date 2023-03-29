@@ -52,6 +52,7 @@ This program supports one video wallpaper at a time.
 The idea comes from https://github.com/terroo/wallset but:
 - I wanted a less bloated program without the extra functionalities.
 - I didn't like the 10 second limit.
+- I use hsetroot for setting my wallpapers, so I wanted to use here too.
 
 Thank you for the inspiration!
 
