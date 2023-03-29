@@ -1,0 +1,38 @@
+#!/bin/bash
+
+if [[ $(pgrep -c videowall ) -gt 1 ]]; then
+    pgrep --oldest videowall | xargs kill -9
+fi
+
+video=
+limit=
+quit=false
+while getopts p:l:q opt; do
+        case "$opt" in
+            p) video="$OPTARG";;
+            l) limit="-t $OPTARG";;
+            q) quit=true;;
+            *) echo "Usage: videowall [-p '<video>' -l '<limit_in_seconds>']" && exit 1
+        esac
+done
+
+if $quit; then pgrep videowall | xargs kill -9; fi
+
+if [[ -n $video ]]; then
+    echo "Preparing video... 🧙"
+    rm -rf "$HOME/.videowall" && mkdir -p "$HOME/.videowall"
+    eval "(ffmpeg -y -ss 00:00:00.000 $limit -i '$video' '$HOME/.videowall/%d.jpg' > /dev/null 2>&1) || echo 'Error! Check options and run again'"
+fi
+
+if [[ -d "$HOME/.videowall" ]]; then
+    total_files=$(($(find "$HOME/.videowall" | wc -l) - 1))
+    if [[ -z $total_files ]]; then echo "Prepare a video first!" && exit 1; fi
+    iterator=1
+    (while true ; do
+        hsetroot -cover "$HOME/.videowall/${iterator}.jpg" > /dev/null 2>&1
+        iterator=$((iterator + 1))
+        if [[ $iterator -gt $total_files ]]; then iterator=1; fi
+    done) & disown
+else
+    echo "Prepare a video first!" && exit 1
+fi
