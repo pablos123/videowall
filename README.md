@@ -32,23 +32,28 @@ videowall
 ```
 
 ## Demo
-https://user-images.githubusercontent.com/52180403/228690747-3a38ca24-57fd-4b8d-96c1-f7b8e9469d72.mp4
+https://user-images.githubusercontent.com/52180403/231311767-bf23cd94-8715-43f9-8336-6b4fbc6b5614.mp4
 
 ## Troubleshooting
+
 If `videowall` is not available after you run the install command you don't have `$HOME/.local/bin/` in your `$PATH`.
 
 Maybe that's because you didn't have the directory before running the command.
-In general `.profile` will load that directory if exists as part of your `$PATH`, so the next time you login or `source` `.profile` you'll have `videowall` available.
+In general `~/.profile` will load that directory if exists as part of your `$PATH`, so the next time you login or `source` `~/.profile` you'll have `videowall` available.
 
-The supported video formats depends on the version of `ffmpeg` that you have.
+- The supported video formats depends on the version of `ffmpeg` that you have.
 
-Things can break depending on the version of `bash` and related programs used.
+- Things can break depending on the version of `bash` and related programs used.
 
-Longer the video longer will take the program to prepare it.
+- Longer the video longer will take the program to prepare it.
 
-This program supports one video wallpaper at a time.
+- This program supports one video wallpaper at a time.
 
 ## More info
+
+**Uninstall**: `rm -f "$HOME/.local/bin/videowall"`
+
+
 The idea comes from https://github.com/terroo/wallset but:
 - I wanted a less bloated program without the extra functionalities.
 - I didn't like the 10 second limit.
@@ -56,6 +61,6 @@ The idea comes from https://github.com/terroo/wallset but:
 
 Thank you for the inspiration!
 
-Tested on Linux Mint 21.
+Tested on Linux Mint 21.1.
 
 I don't have the time to test it in Arch boxes or similar, if you want you can try to run it in other (Linux) more minimalistic OS.
