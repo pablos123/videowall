@@ -13,7 +13,6 @@ sudo apt install ffmpeg hsetroot
 ```
 mkdir -p "$HOME/.local/bin/" && rm -f "$HOME/.local/bin/videowall" && wget 'https://raw.githubusercontent.com/pablos123/videowall/main/videowall' -P "$HOME/.local/bin/" && chmod +x "$HOME/.local/bin/videowall"
 ```
-This will create a file in `$HOME/.local/bin/` named `videowall`
 
 ## Run
 Prepare a video, this will set the video as wallpaper too. (You can specified a time limit)
@@ -41,6 +40,8 @@ If `videowall` is not available after you run the install command you don't have
 Maybe that's because you didn't have the directory before running the command.
 In general `~/.profile` will load that directory if exists as part of your `$PATH`, so the next time you login or `source` `~/.profile` you'll have `videowall` available.
 
+Others:
+
 - The supported video formats depends on the version of `ffmpeg` that you have.
 
 - Things can break depending on the version of `bash` and related programs used.
@@ -61,6 +62,4 @@ The idea comes from https://github.com/terroo/wallset but:
 
 Thank you for the inspiration!
 
-Tested on Linux Mint 21.1.
-
-I don't have the time to test it in Arch boxes or similar, if you want you can try to run it in other (Linux) more minimalistic OS.
+Tested on Linux Mint 21.1
